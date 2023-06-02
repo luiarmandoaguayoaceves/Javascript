@@ -100,7 +100,45 @@ function iniciarApp () {
         <img class="img-fluid" src="${strMealThumb}" alt="receta ${strMeal}"/>
         <h3 class="my-3">Intrucciones</h3>
         <p>${strInstructions}</p>
-        `
+        <h3 class="my-3"> Ingredientes y Cantidades</h3>
+        `;
+
+        const listGroup = document.createElement('UL');
+        listGroup.classList.add('list-group');
+
+        //Mostrar cantidades e ingredientes
+        for(let i = 0; i <= 20; i++){
+            if(receta[`strIngredient${i}`]){
+                const ingrediente = receta[`strIngredient${i}`];
+                const cantidad = receta[`strMeasure${i}`];
+                const ingredinteLi = document.createElement('LI');
+                ingredinteLi.classList.add('list-group-item');
+                ingredinteLi.textContent = `${ingrediente} - ${cantidad}`;
+                listGroup.appendChild(ingredinteLi);
+            }
+        }
+
+        modalBody.appendChild(listGroup);
+        const modalFooter = document.querySelector('.modal-footer');
+        limpiarHTML(modalFooter);
+
+        const btnFavorito = document.createElement('BUTTON');
+        btnFavorito.classList.add('btn', 'btn-danger', 'col');
+        btnFavorito.textContent = 'Guardar Favorito';
+
+        const btnCerrarModal = document.createElement('BUTTON');
+        btnCerrarModal.classList.add('btn', 'btn-secondary', 'col');
+        btnCerrarModal.textContent = 'Cerrar';
+        btnCerrarModal.onclick = function () {
+            modal.hide();
+        }
+
+        modalFooter.appendChild(btnFavorito);
+        modalFooter.appendChild(btnCerrarModal);
+
+
+
+        //Muestra el modal
         modal.show()
     }
 
