@@ -46,7 +46,6 @@ function buscarImagenes (){
         .then (respuesta => respuesta.json())
         .then (resultado => {
             totalPaginas = calcularPaginas(resultado.totalHits);
-            console.log(resultado.totalHits);
             mostrarImagenes(resultado.hits)})
 }
 
