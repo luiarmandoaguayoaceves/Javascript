@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin: auto;
+}
+
+.pokemo_card {
+
+    border-radius: 10%;
+    border: solid;
+    width: 20vw;
+    margin: 1vw;
+}
+.card, h3 {
+    display: flex;
+    justify-content: center;
+    
+}
+.card p {
+    display: block;
+}
+
+img {
+    display: flex;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 70vw;
+        margin: auto;
+        border: solid;
+    }
+    .card {
+        width: 32vw;
+        border: solid;
+        margin: 1vw;
+    }
+}
