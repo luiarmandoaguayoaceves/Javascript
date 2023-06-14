@@ -32,6 +32,7 @@ formulario.addEventListener('submit', function(e){
     
     if(Date < fecha.value){
         console.log('sI');
+        //error
     } else {
         console.log('No');
     }
