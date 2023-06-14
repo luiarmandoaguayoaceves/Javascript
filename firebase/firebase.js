@@ -1,7 +1,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"
-import { collection, getFirestore, addDoc} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"
+import { collection, getFirestore, addDoc, getDocs} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -23,6 +23,4 @@ export const saveData = (hora, alimentar, fecha) => {
     addDoc(collection(db, 'despachar'), {hora, alimentar, fecha})
 }
 
-export const getData = () => {
-    console.log('Lista');
-}
+export const getData = () => getDocs(collection(db, 'despachar'));
