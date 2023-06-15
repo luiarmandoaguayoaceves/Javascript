@@ -1,5 +1,5 @@
 body{
-    background-color: blue;
+    background-color: azure;
     text-align: center;
     font-family: 'Nunito', sans-serif;
 }
@@ -10,3 +10,13 @@ body{
 .contenido>a{
     color: aliceblue;
 }
+
+button {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    transition: background-color 1s;
+    
+    
+}
+
