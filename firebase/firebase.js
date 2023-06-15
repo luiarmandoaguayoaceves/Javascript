@@ -1,7 +1,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"
-import { collection, getFirestore, addDoc, getDocs} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"
+import { collection, getFirestore, addDoc, onSnapshot, deleteDoc, doc, getDoc, updateDoc} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js"
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -19,8 +19,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export const saveData = (hora, alimentar, fecha) => {
-    addDoc(collection(db, 'despachar'), {hora, alimentar, fecha})
+export const saveData = (alimentar, fecha) => {
+    addDoc(collection(db, 'despachar'), {alimentar, fecha})
 }
 
-export const getData = () => getDocs(collection(db, 'despachar'));
+export const getCampo = id => getDoc(doc(db, 'despachar', id))
+
+export const EliminarDato = id => deleteDoc(doc(db, 'despachar', id));
+
+export const getData = (callback) => onSnapshot(collection(db, 'despachar'), callback);
+
+export const updateCampo = (id, newField) => updateDoc(doc(db, 'despachar', id), newField);
