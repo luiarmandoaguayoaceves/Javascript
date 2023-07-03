@@ -96,6 +96,10 @@ function mostrarPlatillo (platillos) {
         inputCantidad.min = 0;
         inputCantidad.value = 0;
         inputCantidad.id = `producto-${id}`;
+        inputCantidad.onchange = function () {
+            const cantidad = parseInt( inputCantidad.value );
+            calcularCantidad({...platillo, cantidad})
+        }
 
         const agregar = document.createElement( 'DIV' );
         agregar.classList.add('col-md-2');
@@ -108,4 +112,23 @@ function mostrarPlatillo (platillos) {
         
         campoPlatillos.appendChild(row);
     })
+}
+
+function calcularCantidad (producto) {
+    //Extrae el pedido actual
+    const { pedido } = cliente;
+    //Revisa que la cantidad sea mayor a 0
+    if (producto.cantidad > 0 ){
+        //Comprobar si el elemento exite en el arreglo
+        if (pedido.some(articulo => articulo.id === pedido.id)){
+            //El objeto si existe y tienes que incrementar el valor
+
+        } else {
+            //El articulo no existe y se agrega al array de pedido
+            cliente.pedido = [...pedido, producto]
+        }
+    } else {
+        console.log('No mayor a 0');
+    }
+    console.log(cliente.pedido);
 }
