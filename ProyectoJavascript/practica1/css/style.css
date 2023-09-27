@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+    box-sizing: border-box; /*Todo se mantiene dentro de su etiqueta padre y se ajusanmedidas internas no se desborda*/
+}
+
+body {
+    font-family: 'Courier New', courier, monospace;
+    display: flex; /*ocupa el espacio de lo que este en la etiqueta*/
+    align-items: center; /*Alinear al centro de manera vertical*/
+    justify-content: center; /*Alinear al centro de manera horizontal*/
+    height: 100vh; /*Tamaño completo de la pantalla*/
+    overflow: hidden; /*Lo que esta dentro de el contenedor no se desborda por jemplo el texto no sobrepasa la imagen*/
+    margin: 0; /*Margen 0*/
+}
+
+.container {
+    display: flex;/* como todo esta en un contenedor todo se ajusta en el tamaño de cada etiqueta*/
+    width: 90vh;/*tamaño viewport height Vertical del contenedor abarca el 90% de la pantalla*/
+}
+
+.panel {
+    background-size: auto 100%; /*ajuste de la etiqueta panel horizontal automatico y alto del 100%*/
+    background-position: center; /*Imagen centrada*/
+    background-repeat: no-repeat; /*No se repite el fondo se ajusta*/
+    height: 80vh; /*Altura del 80%*/
+    border-radius: 50px; /*esquinas redondeadas*/
+    color: white; /*Color del texto*/
+    cursor: pointer; /*arriba de la image se cambia el puntero*/
+    flex: 0.5; /*tamaño de le etiqueta de tipo display flex*/
+    margin: 10px; /*Margen a todos los lados*/
+    position: relative; /*Centrar al centro*/
+    transition: flex 0.7s ease-in; /*se desplaza en 0.7 segundos de izquierda hacia el centro*/
+    -webkit-transition: all 700ms ease-in; /*se desplaza lo que hay dentro de la etiqueta de derecha al centro*/
+}
+
+.panel h3 {
+    font-size: 24px; /*tamaño*/
+    position: absolute; /*acomodate de lado izquiero abajo*/
+    bottom: 20px; /*a 20px del fondo*/
+}
+
+.panel.active { /*Etiqueta con la clase panel activo */
+    flex: 5; /*tomara un tamaño de 5 */
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: 0.3s ease-in 0.4s;
+}
+
+
+/*Si la pantalles de un telefono celular se ocuptan dos paneles y solo se muestran 3 */
+@media (max-width: 480px) {
+    .container{
+        width: 100vw;/*viewport width 100% de el tamaño del navegador*/
+    }
+
+    /*este es el codigo que ocupta el panel 4 y 5*/
+    .panel:nth-of-type(4), .panel:nth-of-type(5){
+        display: none;
+    }
+}

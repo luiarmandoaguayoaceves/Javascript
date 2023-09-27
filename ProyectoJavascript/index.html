@@ -10,25 +10,24 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <title>Portafolio CV</title>
 </head>
-<header class="flex justify-between  mx-0.5 bg-emerald-600 text-white font-mono text-2xl h-20 py-5">
+<header class="flex justify-between  mx-0.5 bg-cyan-500 text-white font-mono text-2xl h-20 py-5 max-sm:block max-sm:h-auto">
     <h3>Luis Armando Aguayo Aceves</h3>
     <nav>
-        <ul class="flex">
+        <ul class="flex max-sm:justify-between max-sm:block">
             <li class="mx-2"><a href="#">Skills</a></li>
             <li class="mx-2"><a href="#">Informacion</a></li>
             <li class="mx-2"><a href="#">Proyectos</a></li>
-            <li class="mx-2"><a href="#">Contacto</a></li>
             <li class="mx-2"><a href="#">Formulario</a></li>
         </ul>
     </nav>
 </header>
 <body>
-    <div id="foto" class="mt-20 mx-20 flex justify-between">
-        <picture class="w-40 ">
+    <div id="foto" class="mt-20 mx-20 flex justify-between max-sm:block">
+        <picture class="w-96 ">
             <img src="img/account_avatar_face_man_people_profile_user_icon_123197.svg" alt="foto de perfil">
         </picture>
         <div id="skills">
-            <picture class="w-80 grid grid-cols-3">
+            <picture class="w-96 grid grid-cols-3 max-sm:w-auto">
                 <img src="img/file_type_css_icon_130661.svg" alt="css">
                 <img src="img/file_type_html_icon_130541.svg" alt="html">
                 <img src="img/file_type_js_official_icon_130509.svg" alt="js">
@@ -38,13 +37,59 @@
             </picture>
         </div>
     </div>
-    <div id="info" class=" grid justify-items-center my-60 mx-60">
-        <h2>Objetivo</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, beatae provident repellendus nisi nobis magni rem enim, ea, incidunt quis ipsum eligendi unde mollitia sequi tenetur blanditiis optio reiciendis. Iste!</p>
-        <h2 class="mt-20">Educacion</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis repellat debitis ex pariatur inventore quae minima quis quia officiis obcaecati sequi totam saepe ea nihil quisquam, doloremque ipsa praesentium enim.</p>
-        <h2 class="mt-20">Experiencia</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt tempora nobis pariatur aliquid officiis dicta harum provident debitis quibusdam sint totam aliquam cupiditate fuga illum, placeat repellendus eaque? Illo, nesciunt.</p>
+    <div id="info" class=" grid my-32 mx-auto w-2/5 justify-center max-sm:w-5/6">
+        <h2 class=" text-5xl uppercase ">Objetivo</h2>
+        <p class=" text-3xl ">
+            <div class="text-3xl max-sm:text-base">
+                Desempeñar la labor como desarrollador web como front-end con habilidades como lenguaje Javascript, lenguaje de etiquetas HTML y estilos con CSS tambien usar framework Tailwind para estilos o SASS, automatizar tareas con GULP basado en NodeJS base de datos SQL en MYSQL con el objestivo de seguir aprendiendo y desempeñando los conocimientos en desarrollo Web y llegar a especializarme en algun framework como Angular o React
+            </div>
+        <h2 class="mt-20  text-5xl uppercase ">Educacion</h2>
+        <div class=" text-3xl max-sm:text-base">
+            <span class="uppercase font-bold"> Centro de enseñzanza tecnica industrial</span> 
+            <br> 
+            Tecnologo en desarrollo de software (Certificado 2015-2019) 
+            <br> 
+            <li>
+                Proyecto de titulacion sistema embebido inalambrico de alimentos para mascotas con pagina web y aplicacion movil 
+            </li>
+        </div>
+        <div class=" text-3xl max-sm:text-base">
+            <span class="uppercase font-bold"> Centro de enseñzanza tecnica industrial</span> 
+            <br> 
+            Ingeniero en desarrollo de software (En curso 2020-2023) 
+            <br> 
+            <li>Especializacion en IA</li> 
+        </div>
+        <h2 class="mt-20 uppercase ">Experiencia</h2>
+            <div class="text-3xl max-sm:text-base">
+                <span class="uppercase font-bold"> Grupo Veq</span> 
+                <br> 
+                Auxiliar de IT (julio 2020 - feb 2022) 
+                <br> 
+                <li>Administracion de SaaS para compañeros</li> 
+                <li>Monitorieo de PaaS</li> 
+                <li>Registro de inventario de equipos tecnologicos de trabajo</li> 
+            </div>
+            <div class="text-3xl max-sm:text-base">
+                <span class="uppercase font-bold"> Inc Pulse</span> 
+                <br> 
+                Auxiliar de IT (feb 2022 - abril 2022) 
+                <br> 
+                <li>Solucion de problemas de usuarios finales a codigo</li> 
+                <li>Monitoreo de servicio</li> 
+                <li>Diseño de actualizaciones</li> 
+            </div>
+            <div class="text-3xl max-sm:text-base">
+                <span class="uppercase font-bold"> Unosquare</span> 
+                <br> 
+                IT Suport and infraestructure JR (abril 2022 - marzo 2023) 
+                <br> 
+                <li>Monitorieo de PaaS</li> 
+                <li>Solucion de problemas a usuarios finales</li> 
+                <li>Asignacion de equipos</li> 
+                <li>Capacitacion</li> 
+                <li>Desarrollo de mejora y automatizacion de procesos</li> 
+            </div>
     </div>
     <div id="lista-cursos" class="container">
         <h1 id="encabezado" class="encavezado">Proyectos</h1>
@@ -87,7 +132,7 @@
     
 
     <div class="max-w-3x1 mx-auto p-10 bg-slate-300 ">
-        <h1 class="text-4xl text-gray-700 pt-32">Enviar mails</h1>
+        <h1 class="text-4xl text-gray-700 pt-32">Solicitar info</h1>
         <div class="bg-white rounded-lg shadow-xl p-10 mt-5">
             <form action="" id="formulario" class="space-y-3">
                 <div class="flex flex-col space-y-2">
@@ -107,7 +152,7 @@
                 <div id="botones" class="flex gap-5">
                     <button
                         type="submit"
-                        class=" flex-1 bg-emerald-600 text-white flex justify-center gap-2 items-center p-3"
+                        class=" flex-1 button-primary text-white flex justify-center gap-2 items-center p-3"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
@@ -129,7 +174,7 @@
 
     </div>
 </body>
-<footer class=" bg-emerald-600 text-white font-mono text-2xl h-10 py-1.5">
+<footer class=" bg-cyan-500 text-white font-mono text-2xl h-10 py-1.5">
 <p>Luis Armando Aguayo Aceves </p>
 </footer>
 </html>
