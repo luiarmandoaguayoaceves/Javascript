@@ -139,7 +139,7 @@ function calcularCantidad (producto) {
         
     } else {
         
-        //Aliminamos o filtramos articulo del array de articulos y almacenamos una copia en el objeto de cliente en el arreglo de pedido
+        //Eliminamos o filtramos articulo del array de articulos y almacenamos una copia en el objeto de cliente en el arreglo de pedido
         const resultado = pedido.filter( articulo => articulo.id != producto.id)
         cliente.pedido = [...resultado]
         
@@ -223,6 +223,17 @@ function mostrarResumem () {
         valorCosto.classList.add('fw-normal');
         valorCosto.textContent = calcularSubTotal(precio, cantidad);
 
+
+        //Boton para eliminar
+        const btnEliminar = document.createElement('BUTTON');
+        btnEliminar.classList.add('btn', 'btn-danger');
+        btnEliminar.textContent = 'Eliminar del pedido';
+
+        //funcion para eliminar del pedido 
+        btnEliminar.onclick = function() {
+            eliminarProducto(id)
+        }
+
         function calcularSubTotal (precio, cantidad) {
             return `$${precio * cantidad}`;
         }
@@ -235,6 +246,8 @@ function mostrarResumem () {
         lista.appendChild(nombreEl);
         lista.appendChild(cantidadEl);
         lista.appendChild(costoEl);
+        lista.appendChild(btnEliminar);
+
 
         //Agregar datos al grupo
         grupo.appendChild(lista);
@@ -258,4 +271,13 @@ function limpiarHTML () {
     while(contenido.firstChild){
         contenido.removeChild(contenido.firstChild)
     }
+}
+
+//Funcion para eliminar un platillo
+function eliminarProducto(id) {
+    console.log(id);
+    
+    //Eliminamos o filtramos articulo del array de articulos y almacenamos una copia en el objeto de cliente en el arreglo de pedido
+    const resultado = pedido.filter( articulo => articulo.id != producto.id)
+    cliente.pedido = [...resultado]
 }
