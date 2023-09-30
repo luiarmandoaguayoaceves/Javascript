@@ -275,9 +275,18 @@ function limpiarHTML () {
 
 //Funcion para eliminar un platillo
 function eliminarProducto(id) {
-    console.log(id);
-    
+    const {pedido} = cliente
+
     //Eliminamos o filtramos articulo del array de articulos y almacenamos una copia en el objeto de cliente en el arreglo de pedido
-    const resultado = pedido.filter( articulo => articulo.id != producto.id)
+    const resultado = pedido.filter( articulo => articulo.id != id)
     cliente.pedido = [...resultado]
+
+    console.log(id);
+
+    //Limpiar HTML 
+    limpiarHTML();
+    
+    //Aqui mostraremos el resumen del pedido
+    mostrarResumem();
+
 }
