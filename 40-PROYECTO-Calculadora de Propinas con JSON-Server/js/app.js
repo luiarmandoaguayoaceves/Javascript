@@ -147,9 +147,15 @@ function calcularCantidad (producto) {
     //Limpiar HTML 
     limpiarHTML();
 
-    //Aqui mostraremos el resumen del pedido
-    mostrarResumem();
+    if (cliente.pedido.length){
+        //Aqui mostraremos el resumen del pedido
+        mostrarResumem();
+    }else {
+        mensajePedidoVacio();
+    }
+        
 }
+
 
 //Esta funcion genera muchi scripting para mostrar resultados 
 function mostrarResumem () {
@@ -280,13 +286,27 @@ function eliminarProducto(id) {
     //Eliminamos o filtramos articulo del array de articulos y almacenamos una copia en el objeto de cliente en el arreglo de pedido
     const resultado = pedido.filter( articulo => articulo.id != id)
     cliente.pedido = [...resultado]
-
-    console.log(id);
-
+    reiniciarValor = document.querySelector(`#producto-${id}`);
+    reiniciarValor.value = 0;
+    
     //Limpiar HTML 
     limpiarHTML();
     
-    //Aqui mostraremos el resumen del pedido
-    mostrarResumem();
+    // si el arreglo esta vacio dejamos el mensaje principal de la pagina de ser caso contrario solo se actualiza la lista y permanecen los otros productos
+    if (cliente.pedido.length){
+        //Aqui mostraremos el resumen del pedido
+        mostrarResumem();
+    }else {
+        mensajePedidoVacio();
+    }
 
+}
+
+function mensajePedidoVacio () {
+    const contenido = document.querySelector('#resumen .contenido');
+    const texto = document.createElement('P');
+    texto.classList.add('text-center');
+    texto.textContent= 'Añade los elementos del pedido';
+
+    contenido.appendChild(texto)
 }
