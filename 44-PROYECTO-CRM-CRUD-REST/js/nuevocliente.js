@@ -1,3 +1,6 @@
+import { nuevoCliente } from './API.js';
+import {mostrarAlerta} from  './funciones.js'
+{nuevoCliente}
 ( function (){
     const formulario = document.querySelector('#formulario');
     formulario.addEventListener('submit', validarClientes);
@@ -19,11 +22,11 @@
 
         if(validacion(cliente)){
             //? Mostrar mensaje de llenar campos
-            console.log('Todos los campos son obligatorios');
+            mostrarAlerta('Todos los campos son obligatorios');
             return;
         }
 
-        console.log('Registro realizado con exíto' );
+        nuevoCliente(cliente);
     }
 
     //!Se recomienda realizar de esta manera la validacion de los campos en un formulario

@@ -6,6 +6,20 @@
       "telefono": "12",
       "empresa": "12212",
       "id": 26
+    },
+    {
+      "nombre": "luis",
+      "email": "luisarmandoaguayoaceves@gmail.com",
+      "telefono": "3328358881",
+      "empresa": "woofood",
+      "id": 27
+    },
+    {
+      "nombre": "luis",
+      "email": "luisarmandoaguayoaceves@gmail.com",
+      "telefono": "3328358881",
+      "empresa": "brades",
+      "id": 28
     }
   ]
 }
