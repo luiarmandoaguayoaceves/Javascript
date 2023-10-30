@@ -19,3 +19,9 @@ export function mostrarAlerta (mensaje) {
         }, 3000);
     }
 }
+
+//Validar
+//!Se recomienda realizar de esta manera la validacion de los campos en un formulario
+export function validacion (obj){
+    return !Object.values(obj).every(input => input !== '');
+}

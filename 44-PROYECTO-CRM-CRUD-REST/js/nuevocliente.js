@@ -1,5 +1,5 @@
 import { nuevoCliente } from './API.js';
-import {mostrarAlerta} from  './funciones.js'
+import {mostrarAlerta, validacion} from  './funciones.js'
 {nuevoCliente}
 ( function (){
     const formulario = document.querySelector('#formulario');
@@ -29,9 +29,5 @@ import {mostrarAlerta} from  './funciones.js'
         nuevoCliente(cliente);
     }
 
-    //!Se recomienda realizar de esta manera la validacion de los campos en un formulario
-    function validacion (obj){
-        return !Object.values(obj).every(input => input !== '');
-    }
-
+    
 })();
