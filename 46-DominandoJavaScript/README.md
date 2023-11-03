@@ -13,5 +13,5 @@
 ### Implicit  Binding
 4. Dandole el dato por implicito un dato dentro de donde esta su alcance ejemplo [04-app.js](https://github.com/luiarmandoaguayoaceves/Javascript/blob/main/46-DominandoJavaScript/js/04-app.js).
 
-
+### Explicit Binding
 
