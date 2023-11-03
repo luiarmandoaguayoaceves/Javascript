@@ -11,6 +11,7 @@
 3. Coercion Se toma el tema de los tipos de datos que JS asigna en automatico a valores el principal problema de ello es que como no se le asigna un tipo de dato al declararlo puede llegar a perderse o a cambiar y eso puede llegar a generar muchos problemas 
 
 ### Implicit  Binding
-4. Dandole el dato por implicito un dato dentro de donde esta su alcance ejemplo [04-app.js](46-DominandoJavaScript/js/04-app.js)
+4. Dandole el dato por implicito un dato dentro de donde esta su alcance ejemplo [04-app.js](https://github.com/luiarmandoaguayoaceves/Javascript/blob/main/46-DominandoJavaScript/js/04-app.js).
+
 
 
