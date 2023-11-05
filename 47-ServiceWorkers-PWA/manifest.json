@@ -1,7 +1,7 @@
 {
     "name": "APV",
     "short_name": "APV",
-    "start_url": "/index.html",
+    "start_url": "/47-ServiceWorkers-PWA/index.html",
     "display": "standalone",
     "background_color": "#D41872",
     "theme_color": "#D41872",
@@ -10,7 +10,8 @@
         {
           "src": "img/icons/Icon-72.png",
           "type": "image/png",
-          "sizes": "72x72"
+          "sizes": "72x72",
+          "purpose": "maskable"
         },
         {
           "src": "img/icons/Icon-120.png",

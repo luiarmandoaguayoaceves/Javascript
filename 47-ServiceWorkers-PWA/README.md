@@ -22,4 +22,9 @@
     Es donde lleva la informacion de la pagina como la configuracion, que tipo orientacion, cual es la pagina de inicio, el tema, el color, los iconos etc.
 
 ### Archivo App 
-    Se muestra como se registra un Service Worker y se crea un archivo js en la raiz 
+    Se muestra como se registra un Service Worker y se crea un archivo js en la raiz  
+
+### Archivo sw
+    Se agrega el codigo de instalacion que solo se ejecutara una vez despues de ser instalado y tambien se activa 
+    Intalacion es bueno para: tomar datos de cache
+    Activacion es bueno para nuevas versiones de PWA
