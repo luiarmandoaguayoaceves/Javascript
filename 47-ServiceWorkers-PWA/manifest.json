@@ -10,8 +10,7 @@
         {
           "src": "img/icons/Icon-72.png",
           "type": "image/png",
-          "sizes": "72x72",
-          "purpose": "maskable"
+          "sizes": "72x72"
         },
         {
           "src": "img/icons/Icon-120.png",
@@ -36,7 +35,8 @@
         {
           "src": "img/icons/Icon-196.png",
           "type": "image/png",
-          "sizes": "196x196"
+          "sizes": "196x196",
+          "purpose": "any maskable"
         },
         {
           "src": "img/icons/Icon-256.png",

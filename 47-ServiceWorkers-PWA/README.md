@@ -28,3 +28,11 @@
     Se agrega el codigo de instalacion que solo se ejecutara una vez despues de ser instalado y tambien se activa 
     Intalacion es bueno para: tomar datos de cache
     Activacion es bueno para nuevas versiones de PWA
+    cargamos en cache los archivos que queremos que se ejecuten offline 
+    *En caso que marque errores se debe eliminar cache y de las herramientas de desarrollador y del boton de recargar click derecho ademas*
+
+### Archivo error.html 
+    Para cuando no encuentra la pagina principal
+
+### versionado
+    Se agrega el versionado en SW.js donde se actualiza la cache pero se debe activar la casilla de actualizar al levantar servicio en aplicacion desde la consola de desarrollo 
