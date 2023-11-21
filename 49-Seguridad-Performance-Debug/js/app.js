@@ -36,16 +36,33 @@ function consultarCriptomonedas() {
 }
 // llena el select 
 function selectCriptomonedas(criptomonedas) {
+    //! inicio de conteo de carga del codigo
+    // const inicio = performance.now()
 
-    criptomonedas.forEach( cripto => {
-        const { FullName, Name } = cripto.CoinInfo;
-        const option = document.createElement('option');
-        option.value = Name;
-        option.textContent = FullName;
-        // insertar el HTML
-        criptomonedasSelect.appendChild(option);
-    });
+    // criptomonedas.forEach( cripto => {
+    //     const { FullName, Name } = cripto.CoinInfo;
+    //     const option = document.createElement('option');
+    //     option.value = Name;
+    //     option.textContent = FullName;
+    //     // insertar el HTML
+    //     criptomonedasSelect.appendChild(option);
+    // });
 
+
+    for(let i = 0; i < criptomonedas.length; i++ ){
+        const { FullName, Name } = criptomonedas[i].CoinInfo;
+         const option = document.createElement('option');
+         option.value = Name;
+         option.textContent = FullName;
+         // insertar el HTML
+         criptomonedasSelect.appendChild(option);
+    }
+
+    //! final de conteo de carga del codigo
+    // const fin = performance.now()
+
+    //! resultado de conteo de carga del codigo
+    // console.log(inicio - fin);
 }
 
 
