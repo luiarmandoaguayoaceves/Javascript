@@ -1,0 +1,14 @@
+{
+  "name": "51-testing-jest",
+  "version": "1.0.0",
+  "description": "Aprendiendo JEST",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Luis Armando Aguayo Aceves",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
