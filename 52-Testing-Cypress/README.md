@@ -7,5 +7,14 @@ Se elimino la carpeta de ejemplos solo para utilizar los necesarios
 
 En la carpera e2e se crearan las pruebas a realizar
 
+ Se recomienda poner esta linea al principio para que te de mejores resultados el autocompletado
+/// <reference types="cypress" />
+
 Ejecutar cypress en terminal para pruebas
     npx cypress open
+
+
+### Atributos de cypress
+    [Sintaxis de cypress](https://docs.cypress.io/guides/references/best-practices#__docusaurus_skipToContent_fallback)
+    
+
