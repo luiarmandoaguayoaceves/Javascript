@@ -18,3 +18,5 @@ Ejecutar cypress en terminal para pruebas
     [Sintaxis de cypress](https://docs.cypress.io/guides/references/best-practices#__docusaurus_skipToContent_fallback)
     
 
+    enl archivo de configuracion se agrega el dominio de la pagina y en cada prueba la ruta del archivo 
+

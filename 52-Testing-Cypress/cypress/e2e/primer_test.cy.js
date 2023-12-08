@@ -2,7 +2,8 @@
 
 describe('Carga la pagina princupal', () => {
     it('Carga la pagina principal', () => {
-        cy.visit('http://127.0.0.1:5500/52-Testing-Cypress/index.html')
+        // cy.visit('http://127.0.0.1:5500/52-Testing-Cypress/index.html')
+        cy.visit('/index.html')
        
         //! Verificar el elemento y su texto
         cy.contains('[data-cy="titulo-proyecto"]', 'Administrador de Pacientes de Veterinaria');
