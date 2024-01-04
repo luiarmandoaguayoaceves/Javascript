@@ -1,8 +1,8 @@
 ## Proyecto de agencia de viajes
 
 1. Instalacion de herramientas 
-    -Instalar NodeJS 
-    -Instalar expres
+    - Instalar NodeJS 
+    - Instalar expres
         `npm i express`
     Instalar nodemon (desarrollo)
         `npm i --save-dev nodemon`
