@@ -4,7 +4,7 @@
     - Instalar NodeJS 
     - Instalar expres
         `npm i express`
-    Instalar nodemon (desarrollo)
+    - Instalar nodemon (desarrollo)
         `npm i --save-dev nodemon`
 
 2. Inicializar proyecto 
