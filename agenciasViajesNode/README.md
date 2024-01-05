@@ -3,11 +3,17 @@
 1. Instalacion de herramientas 
     - Instalar NodeJS 
     - Instalar expres
+
+
         `npm i express`
     - Instalar nodemon (desarrollo)
+
+    
         `npm i --save-dev nodemon`
 
 2. Inicializar proyecto 
+
+
     `npm init `
     
 
@@ -20,7 +26,7 @@
 
                                  ó
 
-                                 
+
         `"type": "commonjs",`     =        -`const express = require('express'); // sintaxis comonjs`
 
 4. se creo una carpeta de rutas 
