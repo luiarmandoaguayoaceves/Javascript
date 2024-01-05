@@ -3,10 +3,15 @@ import express from 'express';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send('Incio')
+    res.render('inicio')
 });
 router.get('/nosotros', (req, res) => {
-    res.send('Nosotros')
+
+    const viajes = 'Viaje a Alemania';
+
+    res.render('nosotros', {
+    viajes
+    })
 });
 router.get('/contacto', (req, res) => {
     res.send('Contacto')
