@@ -3,9 +3,12 @@
 1. Instalacion de herramientas 
     - Instalar NodeJS 
     - Instalar expres
+    - Instalar PUG
 
 
         `npm i express`
+        
+        `npm install pug`
     - Instalar nodemon (desarrollo)
 
     
