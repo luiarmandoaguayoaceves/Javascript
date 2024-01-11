@@ -33,20 +33,20 @@
     Ambos funcionan pero para modulos se debe realizar configuracion en el documento pakage.json se agrega tipo modulos
 
 
-        `"type": "module",`       =        -`import express from 'express';`
+        "type": "module",`       =        -`import express from 'express';`
 
 
                                  ó
 
 
-        `"type": "commonjs",`     =        -`const express = require('express'); // sintaxis comonjs`
+        `"type": "commonjs",`     =        -`const express = require('express'); // sintaxis comonjs
 
 4. se creo una carpeta de rutas 
     express tienen la habilidad de llamar mediante peticiones http como son get, post, put, delete, etc.
     en la carpaeta de las rutas se crearon distintas rutas en las cuales se recive como respuesta usando 
 
     
-                    `   ? req - lo que enviamos : res lo que express nos responde
+                       ? req - lo que enviamos : res lo que express nos responde
         app.get('/', (req, res) => {
             
                                                     ? imprime plano
@@ -69,11 +69,11 @@
         });
         router.get('/contacto', (req, res) => {
             res.send('Contacto')
-        });`
+        });
 
 5. Abrir pgAdmin (federator) e incertar los datos a la base de datos de viajes usando el siguiente codigo para pgAdmin
 
-    `
+    
         
         DROP TABLE IF EXISTS viajes;
     
@@ -96,4 +96,4 @@
         ('Grecia', 40000, '2021-08-29', '2021-09-15', 'grecia', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 18, 'viaje-grecia'),
         ('Inglaterra', 8000, '2021-09-22', '2021-10-03', 'londres', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 22, 'viaje-inglaterra'),
         ('Rio de Janeiro', 50000, '2021-04-16', '2021-04-25', 'rio', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 23, 'viaje-rio-de-janeiro'),
-        ('Francia', 75000, '2021-04-03', '2021-04-10', 'paris', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 14, 'viaje-francia');`
+        ('Francia', 75000, '2021-04-03', '2021-04-10', 'paris', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 14, 'viaje-francia');
