@@ -72,6 +72,7 @@
         });`
 
 5. Abrir pgAdmin (federator) e incertar los datos a la base de datos de viajes usando el siguiente codigo para pgAdmin
+
     ` DROP TABLE IF EXISTS viajes;
 
     CREATE TABLE viajes (
