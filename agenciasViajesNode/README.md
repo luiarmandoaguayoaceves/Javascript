@@ -97,3 +97,14 @@
         ('Inglaterra', 8000, '2021-09-22', '2021-10-03', 'londres', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 22, 'viaje-inglaterra'),
         ('Rio de Janeiro', 50000, '2021-04-16', '2021-04-25', 'rio', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 23, 'viaje-rio-de-janeiro'),
         ('Francia', 75000, '2021-04-03', '2021-04-10', 'paris', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 14, 'viaje-francia');
+
+
+6. Carpeta de configuracion y la configuracion de Sequelize con la base de datos en posgres
+    
+    Al configurar la base de datos pide:
+
+
+        const db = new Sequelize('nombre de la base de datos', 'usuario agregado en la base de datos', 'contraseña', {
+        host: 'localhost',
+        port: 5432,
+        dialect: 'postgres',...
