@@ -72,26 +72,25 @@
         });`
 
 5. Abrir pgAdmin (federator) e incertar los datos a la base de datos de viajes usando el siguiente codigo para pgAdmin
-    `DROP TABLE IF EXISTS viajes;
+    ` DROP TABLE IF EXISTS viajes;
 
-CREATE TABLE viajes (
-  id serial PRIMARY KEY,
-  titulo varchar(60),
-  precio numeric(10, 2),
-  fecha_ida date,
-  fecha_vuelta date,
-  imagen varchar(15),
-  descripcion text,
-  disponibles int,
-  slug varchar(20)
-);
+    CREATE TABLE viajes (
+    id serial PRIMARY KEY,
+    titulo varchar(60),
+    precio numeric(10, 2),
+    fecha_ida date,
+    fecha_vuelta date,
+    imagen varchar(15),
+    descripcion text,
+    disponibles int,
+    slug varchar(20)
+    );
 
-INSERT INTO viajes (titulo, precio, fecha_ida, fecha_vuelta, imagen, descripcion, disponibles, slug)
-VALUES 
-  ('Italia', 50000, '2021-06-24', '2021-06-30', 'roma', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 32, 'viaje-italia'),
-  ('Canada', 60000, '2021-07-19', '2021-07-19', 'canada', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 25, 'viaje-canada'),
-  ('Grecia', 40000, '2021-08-29', '2021-09-15', 'grecia', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 18, 'viaje-grecia'),
-  ('Inglaterra', 8000, '2021-09-22', '2021-10-03', 'londres', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 22, 'viaje-inglaterra'),
-  ('Rio de Janeiro', 50000, '2021-04-16', '2021-04-25', 'rio', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 23, 'viaje-rio-de-janeiro'),
-  ('Francia', 75000, '2021-04-03', '2021-04-10', 'paris', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 14, 'viaje-francia');
-`
+    INSERT INTO viajes (titulo, precio, fecha_ida, fecha_vuelta, imagen, descripcion, disponibles, slug)
+    VALUES 
+    ('Italia', 50000, '2021-06-24', '2021-06-30', 'roma', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 32, 'viaje-italia'),
+    ('Canada', 60000, '2021-07-19', '2021-07-19', 'canada', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 25, 'viaje-canada'),
+    ('Grecia', 40000, '2021-08-29', '2021-09-15', 'grecia', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 18, 'viaje-grecia'),
+    ('Inglaterra', 8000, '2021-09-22', '2021-10-03', 'londres', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 22, 'viaje-inglaterra'),
+    ('Rio de Janeiro', 50000, '2021-04-16', '2021-04-25', 'rio', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 23, 'viaje-rio-de-janeiro'),
+    ('Francia', 75000, '2021-04-03', '2021-04-10', 'paris', 'Praesent tincidunt ante at justo semper volutpat. Sed risus neque, scelerisque id dictum in, placerat non erat. ...', 14, 'viaje-francia'); `
