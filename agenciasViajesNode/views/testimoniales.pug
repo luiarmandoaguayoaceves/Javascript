@@ -2,5 +2,21 @@ extends ./layout/index
 
 block contenido
     main.container.mt-5
+        h1= paginax
         .row 
-            h1= pagina
+            h2.d-block.w-100.text-center Agregar un Testimonial
+
+            .row.justify-content-center.col
+                .col-md-8 
+                    form(action="/testimoniales" method="POST")
+                        .form-group 
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control")  
+                        .form-group 
+                            label(for="correo") Correo Electronico 
+                            input#correo(type="text", placeholder="Tu correo", name="correo", class="form-control")  
+                        .form-group 
+                            label(for="mensaje") Mensaje 
+                            textarea#mensaje(name="mensaje", class="form-control", placeholder="Tu mensaje", row=3 )
+                        input.btn.btn-success.btn-block(type="submit")
+                            

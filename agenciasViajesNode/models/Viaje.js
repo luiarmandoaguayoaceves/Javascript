@@ -20,10 +20,10 @@ export const Viaje = db.define('viajes', {
     descripcion: {
         type: Sequelize.STRING
     },
-    disponible: {
+    disponibles: {
         type: Sequelize.STRING
     },
     slug: {
         type: Sequelize.STRING
-    },
+    }
 })
