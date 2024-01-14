@@ -2,21 +2,27 @@ extends ./layout/index
 
 block contenido
     main.container.mt-5
-        h1= paginax
+        h1.text-center.mt-5 #{pagina}
         .row 
-            h2.d-block.w-100.text-center Agregar un Testimonial
 
+            .col-md-12
+                h2.d-block.w-100.text-center Agregar un Testimonial
+                if(errores)
+                    each error in errores
+                        .alert.col.alert-danger.text-center= error.mensaje
+
+        
             .row.justify-content-center.col
                 .col-md-8 
                     form(action="/testimoniales" method="POST")
                         .form-group 
                             label(for="nombre") Nombre 
-                            input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control")  
+                            input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control", value= nombre)  
                         .form-group 
                             label(for="correo") Correo Electronico 
-                            input#correo(type="text", placeholder="Tu correo", name="correo", class="form-control")  
+                            input#correo(type="text", placeholder="Tu correo", name="correo", class="form-control", value= correo)  
                         .form-group 
                             label(for="mensaje") Mensaje 
-                            textarea#mensaje(name="mensaje", class="form-control", placeholder="Tu mensaje", row=3 )
+                            textarea#mensaje(name="mensaje", class="form-control", placeholder="Tu mensaje", row=3 )= mensaje
                         input.btn.btn-success.btn-block(type="submit")
                             
