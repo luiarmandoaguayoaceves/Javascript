@@ -6,7 +6,9 @@
     - Instalar expres
     - Instalar PUG
     - instalar posgres y pgAdmin
+    - Instalar dotenv
 
+        `npm i dotenv`
 
         `npm i express`
         
@@ -108,3 +110,5 @@
         host: 'localhost',
         port: 5432,
         dialect: 'postgres',...
+
+7. Crea variables de entorno en un archivo .env donde lo omitas con gitignore y eso ayudara a no tener vulnervilidades en el codigo 
