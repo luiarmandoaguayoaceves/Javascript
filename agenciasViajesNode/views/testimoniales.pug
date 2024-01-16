@@ -4,7 +4,18 @@ block contenido
     main.container.mt-5
         h1.text-center.mt-5 #{pagina}
 
-        p= JSON.stringify(testimoniales)
+        blockquote.text-center Lee sobre nuestros clientes y sus experiencias
+        .row.testimoniales
+            each testimonial in testimoniales
+                .col-md-6.col-lg-4.mb-4 
+                    .card 
+                        .card-body 
+                            blockquote.blockquote 
+                            p.mb-0 
+                                | #{testimonial.mensaje}
+                            footer.blockquote-footer
+                                | #{testimonial.nombre}
+
 
         .row 
 
