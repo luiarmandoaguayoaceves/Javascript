@@ -112,3 +112,14 @@
         dialect: 'postgres',...
 
 7. Crea variables de entorno en un archivo .env donde lo omitas con gitignore y eso ayudara a no tener vulnervilidades en el codigo 
+
+8. Conectar a una base de datos en linea en este caso filess.io 
+
+9. configurar para subirlo a git o un servidor 
+    - poner puerto en el archivo [index.js](index.js)
+    
+    `const port = process.env.PORT || 4000;`
+
+    - poner comando a ejecutar en  [package.json](package.json) 
+    
+    `"start": "node index.js"`
